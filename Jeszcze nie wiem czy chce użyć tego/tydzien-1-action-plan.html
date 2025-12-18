@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYDZIEŃ 1 - Action Plan | Laser Tag Poznań</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #0f1419;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+
+        .principle {
+            background: #1a1f2e;
+            padding: 30px 40px;
+            border-left: 5px solid #f59e0b;
+        }
+
+        .principle h2 {
+            color: #f59e0b;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .principle p {
+            color: #d1d5db;
+            font-size: 1.05em;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 30px 40px;
+            background: #0a0e14;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid;
+            transition: transform 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card.critical {
+            border-color: #ef4444;
+        }
+
+        .stat-card.high {
+            border-color: #f59e0b;
+        }
+
+        .stat-card.medium {
+            border-color: #10b981;
+        }
+
+        .stat-card h3 {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #e0e0e0;
+        }
+
+        .stat-card .value {
+            font-size: 2em;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .stat-card .label {
+            font-size: 0.9em;
+            color: #9ca3af;
+        }
+
+        .content {
+            padding: 20px 40px 40px 40px;
+        }
+
+        .day-section {
+            margin-bottom: 40px;
+            background: #1a1f2e;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #2d3748;
+        }
+
+        .day-header {
+            padding: 20px 30px;
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            border-bottom: 2px solid #4a5568;
+        }
+
+        .day-header h2 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .day-header .focus {
+            font-size: 0.9em;
+            color: #a0aec0;
+            font-weight: 400;
+        }
+
+        .tasks {
+            padding: 20px 30px;
+        }
+
+        .task-card {
+            background: #0f1419;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid;
+            transition: all 0.2s;
+        }
+
+        .task-card:hover {
+            background: #1a1f2e;
+            transform: translateX(5px);
+        }
+
+        .task-card.priority-critical {
+            border-color: #ef4444;
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.1) 0%, #0f1419 100%);
+        }
+
+        .task-card.priority-high {
+            border-color: #f59e0b;
+            background: linear-gradient(90deg, rgba(245, 158, 11, 0.1) 0%, #0f1419 100%);
+        }
+
+        .task-card.priority-medium {
+            border-color: #10b981;
+            background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, #0f1419 100%);
+        }
+
+        .task-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox {
+            min-width: 24px;
+            height: 24px;
+            border: 2px solid #4a5568;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 2px;
+        }
+
+        .checkbox:hover {
+            border-color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .task-title {
+            flex: 1;
+        }
+
+        .task-title h3 {
+            color: #f3f4f6;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .task-title .meta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .tag.roi {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+        }
+
+        .tag.effort {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+        }
+
+        .tag.time {
+            background: rgba(102, 126, 234, 0.2);
+            color: #667eea;
+        }
+
+        .why {
+            background: #1a1f2e;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 3px solid #667eea;
+        }
+
+        .why h4 {
+            color: #667eea;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .why p {
+            color: #d1d5db;
+            font-size: 0.95em;
+        }
+
+        .how {
+            background: #1a1f2e;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #10b981;
+        }
+
+        .how h4 {
+            color: #10b981;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .how ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .how li {
+            color: #d1d5db;
+            font-size: 0.95em;
+            padding: 6px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .how li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .priority-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .priority-badge.critical {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid #ef4444;
+        }
+
+        .priority-badge.high {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            border: 1px solid #f59e0b;
+        }
+
+        .priority-badge.medium {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            border: 1px solid #10b981;
+        }
+
+        .time-block {
+            background: #0a0e14;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-left: 3px solid #667eea;
+        }
+
+        .time-block .time {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .time-block .activity {
+            color: #d1d5db;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            background: #1a1f2e;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #2d3748;
+        }
+
+        .footer h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .footer p {
+            color: #9ca3af;
+            font-size: 1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .kpi-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .kpi-box .number {
+            font-size: 3em;
+            font-weight: 800;
+            color: white;
+        }
+
+        .kpi-box .desc {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚡ TYDZIEŃ 1: ACTION PLAN ⚡</h1>
+            <div class="subtitle">Laser Tag Poznań - Wypełnienie Martwych Godzin + Revenue Boost</div>
+        </div>
+
+        <div class="principle">
+            <h2>🎯 Zasada 20/80: Maksymalne Dźwignie, Minimum Kompleksowości</h2>
+            <p><strong>Cel:</strong> Wypełnić martwe godziny (poranki + pon-czw wieczory) przez targetowanie 3 segmentów: STUDENCI, FIRMY, SZKOŁY. Równolegle: fix pricing + email automation + referral system = instant +70k PLN/mies revenue boost.</p>
+            <p style="margin-top: 10px;"><strong>Filozofia:</strong> Najpierw TEST demand organicznie (low cost), potem BUILD infrastructure, na końcu SCALE z paid ads. Zero perfectionism - launch MVP, iteruj na podstawie danych.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card critical">
+                <h3>Target Revenue Boost</h3>
+                <div class="value">+70k</div>
+                <div class="label">PLN/miesiąc (30 dni)</div>
+            </div>
+            <div class="stat-card high">
+                <h3>Investment Required</h3>
+                <div class="value">&lt;20k</div>
+                <div class="label">PLN total (tydzień 1-4)</div>
+            </div>
+            <div class="stat-card medium">
+                <h3>Expected ROI</h3>
+                <div class="value">3.5x</div>
+                <div class="label">Pierwszy miesiąc</div>
+            </div>
+            <div class="stat-card high">
+                <h3>Tasks This Week</h3>
+                <div class="value">18</div>
+                <div class="label">Konkretnych akcji</div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <!-- DZIEŃ 1 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <h2>📅 DZIEŃ 1 - PONIEDZIAŁEK</h2>
+                    <div class="focus">Focus: Pricing Audit + Email Setup + Demand Testing</div>
+                </div>
+                <div class="tasks">
+
+                    <div class="task-card priority-critical">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>1. Pricing Audit - Analiza Obecnych Pakietów</h3>
+                                <div class="meta">
+                                    <span class="tag roi">ROI: 15k PLN/mies</span>
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">8:00-10:00</span>
+                                    <span class="priority-badge critical">KRYTYCZNE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Brak price anchoring (decoy effect) = pozostawiasz 15k PLN/mies na stole. Research pokazuje: 3-tier packages zwiększają avg ticket o 20-30%. USA/UK charging 100-120 PLN/guest, ty ~70 PLN = underpricing.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Testować/Przygotować</h4>
+                            <ul>
+                                <li>Zbierz dane: avg ticket value ostatnie 3 miesiące (jaki pakiet, ile osób, total PLN)</li>
+                                <li>Mystery shopping: zadzwoń do 3 konkurentów (Shotgun, Laser Arena, Luboń) jako rodzic - zapytaj o pakiety urodzinowe, zapisz dokładne ceny</li>
+                                <li>Benchmark vs research: USA $25.99 = 117 PLN, UK £13.99 = 76 PLN</li>
+                                <li>Design 3-tier: BASIC (69 zł - biedny), STANDARD (89 zł - target), PREMIUM (129 zł - anchor)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-critical">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>2. Email Platform Setup - Trial 2 Systemów</h3>
+                                <div class="meta">
+                                    <span class="tag roi">ROI: 18k PLN/mies</span>
+                                    <span class="tag effort">Effort: 1.5h</span>
+                                    <span class="tag time">10:00-11:30</span>
+                                    <span class="priority-badge critical">KRYTYCZNE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Email automation = +18% repeat visits przy ROI 432x. 90%+ open rate dla transactional emails. Brak email follow-up = tracisz 216k PLN rocznie. To NAJSZYBSZY quick win.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Testować/Przygotować</h4>
+                            <ul>
+                                <li>Trial Mailchimp (free do 500 contacts) + Brevo (free do 300 emails/day)</li>
+                                <li>Test: czy możesz zaimportować CSV z klientami? Czy łatwo stworzyć automation?</li>
+                                <li>Check: integracja z Twoim obecnym systemem rezerwacji (Monday.com?)</li>
+                                <li>Decision: która platforma prostsze UI? (wybierz jedną do końca dnia)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-high">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>3. Cold Calling Szkół - Test Demand (5 szkół)</h3>
+                                <div class="meta">
+                                    <span class="tag roi">ROI: 25k PLN/mies potential</span>
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">13:00-15:00</span>
+                                    <span class="priority-badge high">WYSOKIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Poranki (9-15) = 100% puste, koszt krańcowy ≈0. Research: "Nikt nie komunikuje programów dla szkół systemowo". Jedna szkoła = 30 dzieci/wizyta * 50 PLN = 1500 PLN przy prawie zerowym koszcie dodatkowym.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Testować/Przygotować</h4>
+                            <ul>
+                                <li>Lista: 5 szkół podstawowych Poznań (google maps, radius 5km od Fortu)</li>
+                                <li>Script: "Dzień dobry, oferujemy WF + Lekcję Współpracy na laser tagu. 30 dzieci, 2h = 1200 PLN (40 zł/os). Kawa dla nauczyciela gratis. Kiedy planujecie wycieczkę?"</li>
+                                <li>TEST: jaki response? Jakie pytania zadają? Jaki pricing akceptują?</li>
+                                <li>Zapisz DOKŁADNIE: co mówią, jakie obiekcje, jaki decision timeline</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-medium">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>4. Student Survey - FB Groups UAM/Politechnika</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Test demand</span>
+                                    <span class="tag effort">Effort: 1h</span>
+                                    <span class="tag time">15:30-16:30</span>
+                                    <span class="priority-badge medium">ŚREDNIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Pon-czw wieczory (19-22) = puste. Student research: wrażliwi na cenę, szukają recurring fun. Survey = darmowy test demand + messaging validation przed wydaniem złotówki na ads.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Testować/Przygotować</h4>
+                            <ul>
+                                <li>Znajdź: FB groups "Spotted UAM", "Politechnika Poznańska", "Studenci Poznań"</li>
+                                <li>Post (Google Forms): "Hej! Robimy research. Środy wieczorem laser tag -50% dla studentów (30 zł). Przyszedłbyś? Co musiałoby być żeby wrócić regularnie?"</li>
+                                <li>TEST: ile responses? Jaki % mówi "tak"? Co sugerują? (liga? turnieje? piwo po?)</li>
+                                <li>Bonus: oferuj 5 darmowych wejściówek losowanie za wypełnienie = więcej responses</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DZIEŃ 2 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <h2>📅 DZIEŃ 2 - WTOREK</h2>
+                    <div class="focus">Focus: Email Templates + Student Product Design + LinkedIn Outreach</div>
+                </div>
+                <div class="tasks">
+
+                    <div class="task-card priority-critical">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>5. Email Templates - 3 Podstawowe Flow</h3>
+                                <div class="meta">
+                                    <span class="tag roi">ROI: 18k PLN/mies</span>
+                                    <span class="tag effort">Effort: 3h</span>
+                                    <span class="tag time">8:00-11:00</span>
+                                    <span class="priority-badge critical">KRYTYCZNE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Research: 90%+ open rate dla "thank you" emails, 30-40% rebooking rate dla birthday reminders. 3 proste templates = automation która działa 24/7 bez Twojego czasu. Cost: 200 PLN/mies, return: 18k PLN/mies.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Przygotować</h4>
+                            <ul>
+                                <li>Email 1 (0-24h po wizycie): "Dziękujemy [IMIĘ]! Jak Ci poszło? Wróć w 30 dni = 20% taniej. [LINK]"</li>
+                                <li>Email 2 (14 dni): "Zostaw nam opinię Google ⭐ = 10% off na następną grę [LINK]"</li>
+                                <li>Email 3 (11 miesięcy - birthday): "[IMIĘ DZIECKA] już prawie urodziny! Book early = 15% off + najlepsze sloty [LINK]"</li>
+                                <li>Setup automation w Mailchimp/Brevo (trigger: po wizycie, conditional logic)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-high">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>6. "Wednesday Showdown" Event Design</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Community building</span>
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">11:30-13:30</span>
+                                    <span class="priority-badge high">WYSOKIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Student research: "Studenci wracają jeśli stworzysz ligę. Rywalizacja uzależnia." Recurring weekly event = habit formation. BEZ tego Meta Ads da tylko 1x visits. Z tym: recurring revenue stream.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Zaprojektować</h4>
+                            <ul>
+                                <li>Format: Co środa 19:00-22:00, tournament bracket (single elimination)</li>
+                                <li>Pricing: 30 zł entry fee (studenci), winner gets 100 zł credit (cost: 30 zł, ale motywacja ogromna)</li>
+                                <li>Leaderboard: top 10 monthly ranking na FB + ekran w venue</li>
+                                <li>Test: zapowiedź w student survey (dzień 1), launch za 2 tygodnie (dzień 15)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-high">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>7. LinkedIn Outreach - 20 HR Managers Poznań</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Test B2B demand</span>
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">14:00-16:00</span>
+                                    <span class="priority-badge high">WYSOKIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Corporate research: LinkedIn >> Meta dla B2B. CAC 150-400 PLN ale LTV 800-1500+ PLN. Wypełnia różne sloty (lunch breaks, after-hours). Long sales cycle (6-18 mies) ale predictable revenue.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Testować</h4>
+                            <ul>
+                                <li>LinkedIn search: "HR Manager" + "Poznań" + firmy 50-200 employees</li>
+                                <li>InMail template: "Cześć [IMIĘ], organizujemy unikalne warsztaty Leadership + Laser Tag (team building z debrief strategicznym). Q1/Q2 dla Twojego zespołu? 15 min call?"</li>
+                                <li>TEST: response rate? Ile odpowiada? Jakie pytania?</li>
+                                <li>Target: 2-3 responses = success (10-15% response rate B2B OK)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-medium">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>8. Przygotowanie Bazy Szkół - 50 Kontaktów</h3>
+                                <div class="meta">
+                                    <span class="tag effort">Effort: 1h</span>
+                                    <span class="tag time">16:30-17:30</span>
+                                    <span class="priority-badge medium">ŚREDNIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Poranki = 160 godzin/mies puste. Jedna szkoła/tydzień = 6k PLN/mies dodatkowego revenue. Przygotowanie listy = foundation dla codziennych cold calls przez cały tydzień.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Przygotować</h4>
+                            <ul>
+                                <li>Google Maps: "szkoła podstawowa Poznań" (radius 10km od Fortu)</li>
+                                <li>Zbierz: nazwa, adres, telefon, email (ze strony www)</li>
+                                <li>Priorytet: klasy 4-8 (target age 10-15 = ideal dla laser tag)</li>
+                                <li>Spreadsheet: tracking (data call, outcome, follow-up needed)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DZIEŃ 3 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <h2>📅 DZIEŃ 3 - ŚRODA</h2>
+                    <div class="focus">Focus: Pricing Launch + Email Automation Live + Cold Calls</div>
+                </div>
+                <div class="tasks">
+
+                    <div class="task-card priority-critical">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>9. Launch New Pricing Structure - 3 Tiers</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Immediate 15k PLN/mies</span>
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">8:00-10:00</span>
+                                    <span class="priority-badge critical">KRYTYCZNE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Research: Decoy effect działa NATYCHMIAST. Prezentuj PREMIUM first (129 zł anchor) -> STANDARD (89 zł) wygląda na okazję. 30% klientów upgrade = 9k PLN/mies, 10% wybierze premium = 6k PLN/mies.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Wdrożyć</h4>
+                            <ul>
+                                <li>Update strony www: cennik ZAWSZE od najdroższego do najtańszego (left to right)</li>
+                                <li>Script dla Ani przy telefonie: "Mamy 3 pakiety: Premium 129 zł (tort, animator, nielimitowane gry), Standard 89 zł (all-inclusive, pizza, napoje), Basic 69 zł (gra + sala). Który Was interesuje?"</li>
+                                <li>TEST już dziś: następna rezerwacja - offer 3 tiers, see co wybierają</li>
+                                <li>Monitor: przez tydzień tracking % wybierających każdy tier</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-critical">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>10. Email Automation - LIVE (3 Flow)</h3>
+                                <div class="meta">
+                                    <span class="tag roi">18k PLN/mies</span>
+                                    <span class="tag effort">Effort: 3h</span>
+                                    <span class="tag time">10:00-13:00</span>
+                                    <span class="priority-badge critical">KRYTYCZNE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Każdy dzień bez email automation = tracisz 600 PLN (18k/30 dni). Setup dziś = zaczyna działać od jutra. Research: transactional emails 90%+ open, birthday reminders 30-40% conversion.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Wdrożyć</h4>
+                            <ul>
+                                <li>Import ostatnie 3 miesiące klientów do Mailchimp (z Monday.com lub gdzie masz dane)</li>
+                                <li>Setup Flow 1: trigger "booking confirmed" -> email 24h later (thank you + 20% off return)</li>
+                                <li>Setup Flow 2: trigger "booking confirmed" -> email 14 days later (review request + 10% incentive)</li>
+                                <li>Setup Flow 3: manual segment "birthday kids" -> email 11 months after (early bird 15% off)</li>
+                                <li>TEST: wyślij sobie test email, sprawdź czy linki działają, czy tracking UTM ok</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-high">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>11. Cold Calling Szkół - 5 Kolejnych</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Scale testing</span>
+                                    <span class="tag effort">Effort: 1.5h</span>
+                                    <span class="tag time">14:00-15:30</span>
+                                    <span class="priority-badge high">WYSOKIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Dzień 1: test messaging. Dzień 3: scale + iterate based na feedback. Research: 10 calls/week minimum. Target: 1-2 bookings z 10 calls = success (10-20% conversion OK dla cold outreach).</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Iterować</h4>
+                            <ul>
+                                <li>Review dzień 1 calls: jakie obiekcje? (pricing, safety, paperwork?)</li>
+                                <li>Adjust script: address top obiekcję upfront ("Mamy gotowe zgody dla rodziców PDF")</li>
+                                <li>Test: czy niższy price point (35 zł/os) zwiększa interest?</li>
+                                <li>Track: conversion rate, avg decision timeline (kiedy booking realnie?)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DZIEŃ 4 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <h2>📅 DZIEŃ 4 - CZWARTEK</h2>
+                    <div class="focus">Focus: Pakiety OFF-PEAK + Librus Research + Student Event Calendar</div>
+                </div>
+                <div class="tasks">
+
+                    <div class="task-card priority-critical">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>12. Pakiet "WF Laser Tag" - Design + Pricing</h3>
+                                <div class="meta">
+                                    <span class="tag roi">25k PLN/mies potential</span>
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">8:00-10:00</span>
+                                    <span class="priority-badge critical">KRYTYCZNE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Educational Groups research: "Brak dedykowanych pakietów edukacyjnych - wszyscy oferują tylko wycieczki". Stworzenie produktu "WF + Wychowawcza" = differentiation + edukacyjne alibi dla dyrekcji = easier approval.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Zaprojektować</h4>
+                            <ul>
+                                <li>Pakiet: 30 uczniów, 2h (90 min gra + 30 min debrief o współpracy/fair play)</li>
+                                <li>Pricing based na feedback z 10 calls: 35-40 zł/os = 1050-1200 PLN total</li>
+                                <li>Include: kawa + ciasto dla nauczyciela (cost 15 zł, perceived value: wysoka)</li>
+                                <li>Materiały: 1-page PDF "Wartości Edukacyjne Laser Tag" (teamwork, strategia, aktywność) dla dyrekcji</li>
+                                <li>Safety: checklist "Protokół Bezpieczeństwa" (visible na stronie)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-high">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>13. Pakiet "Student Night Pass" - Design</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Recurring revenue</span>
+                                    <span class="tag effort">Effort: 1.5h</span>
+                                    <span class="tag time">10:00-11:30</span>
+                                    <span class="priority-badge high">WYSOKIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Student research: "Subscription models - subscribers visit 3x częściej". Netflix model dla laser tag = recurring revenue + wypełnienie pon-czw wieczorów. Research: memberships increase LTV 3-4x.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Zaprojektować</h4>
+                            <ul>
+                                <li>Option A: Monthly Pass 99 zł = unlimited pon-czw 19-22 (low commitment test)</li>
+                                <li>Option B: 4-Entry Pass 99 zł = 4 gry (25 zł/gra vs 60 zł standard) valid 2 months</li>
+                                <li>TEST w survey responses: który model preferują? Monthly vs multi-entry?</li>
+                                <li>Include: access do Wednesday Showdown tournament, leaderboard tracking, "member only" modes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-medium">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>14. Librus/Vulcan Ads Platform Research</h3>
+                                <div class="meta">
+                                    <span class="tag roi">School acquisition</span>
+                                    <span class="tag effort">Effort: 1h</span>
+                                    <span class="tag time">13:00-14:00</span>
+                                    <span class="priority-badge medium">ŚREDNIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Meta Ads research EXPLICITLY: "Reklamy w Librus/Vulcan kluczowe w Polsce". To gdzie nauczyciele RZECZYWIŚCIE są (nie Facebook). Direct access do decision makers.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Przygotować</h4>
+                            <ul>
+                                <li>Google: "reklama Librus Vulcan" - znajdź commercial info</li>
+                                <li>Check: greenparrot.pl/blog/reklama-na-librusie-i-vulcanie (z research sources)</li>
+                                <li>Sprawdź: pricing, formaty, targeting options</li>
+                                <li>Decision: czy cost-effective? (benchmark z cold calling effectiveness)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DZIEŃ 5 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <h2>📅 DZIEŃ 5 - PIĄTEK</h2>
+                    <div class="focus">Focus: 3-Month Event Calendar + Referral Program + Influencer Outreach</div>
+                </div>
+                <div class="tasks">
+
+                    <div class="task-card priority-high">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>15. Event Calendar Q1 2026 (Luty-Kwiecień)</h3>
+                                <div class="meta">
+                                    <span class="tag roi">FOMO creation</span>
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">8:00-10:00</span>
+                                    <span class="priority-badge high">WYSOKIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Student research: "FOMO creation - limited spots, exclusive experiences". Event calendar visible 3 months ahead = commitment mechanism + marketing content. Research: tournaments announced 6 months ahead = max awareness.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Stworzyć</h4>
+                            <ul>
+                                <li>RECURRING: Every Wednesday 19:00 "Wednesday Showdown" (start 29 stycznia)</li>
+                                <li>MONTHLY: First Saturday "Grand Tournament" (1 lutego, 1 marca, 5 kwietnia)</li>
+                                <li>THEMED: Valentine's Night (14 lutego - couples tournament), St Patrick's (17 marca - green theme)</li>
+                                <li>Publish: strona www, FB event, Instagram stories (countdown), email blast do bazy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-high">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>16. Referral Program MVP - Design + Tech</h3>
+                                <div class="meta">
+                                    <span class="tag roi">12k PLN/mies</span>
+                                    <span class="tag effort">Effort: 2.5h</span>
+                                    <span class="tag time">10:00-12:30</span>
+                                    <span class="priority-badge high">WYSOKIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Już masz 70% z polecenia (ZŁOTO!) ale niesystematyzowane. Research: "Two-sided incentives increase referrals 70% → 85%". 150 dodatkowych klientów/mies * 80 PLN = 12k PLN przy CAC 5-10 PLN (vs 15-45 paid ads).</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Wdrożyć (MVP - no fancy tech)</h4>
+                            <ul>
+                                <li>Incentive: Polecający = 20 PLN credit (forced return visit), Nowy = 15% off first visit</li>
+                                <li>Tech (simple): Unique discount codes (ANIA-REF-001, MAREK-REF-002) generowane przy checkout</li>
+                                <li>Messaging: Email po wizycie "Poleć znajomym - dostaniesz 20 zł credit. Oni 15% taniej. [TU TWÓJ KOD]"</li>
+                                <li>Tracking: spreadsheet (kto polecił, kto użył code, conversion)</li>
+                                <li>Physical: QR code przy wyjściu "Polecasz? Scan here" → landing page z kodem</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-medium">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>17. Micro-Influencer Outreach - 5 Studentów UAM/Politechnika</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Organic reach</span>
+                                    <span class="tag effort">Effort: 1.5h</span>
+                                    <span class="tag time">14:00-15:30</span>
+                                    <span class="priority-badge medium">ŚREDNIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Student research: "73% Gen Z ufa micro-influencerom (10k-100k followers)". Barter deal (darmowe wejście za post) = cost ~60 zł, reach 5k-20k studentów. CAC: 0.003-0.012 PLN (!!) vs 20-30 PLN Meta Ads.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Znaleźć/Testować</h4>
+                            <ul>
+                                <li>Instagram search: hashtag #poznan #student (2k-20k followers, engagement >3%)</li>
+                                <li>Check: czy postują o lifestyle, nightlife, food? (fit z laser tag)</li>
+                                <li>DM: "Hej! Laser Tag Poznań. Zapraszamy Ciebie + 5 friends gratis w zamian za 1 Reel/Story. Game?"</li>
+                                <li>TEST: response rate? Jakie pytania? Negotiate barter deal</li>
+                                <li>Target: 2-3 agreements do końca tygodnia</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DZIEŃ 6 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <h2>📅 DZIEŃ 6 - SOBOTA</h2>
+                    <div class="focus">Focus: Cost Audit + Campus Ambassadors + Corporate Package</div>
+                </div>
+                <div class="tasks">
+
+                    <div class="task-card priority-high">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>18. Cost Structure Breakdown - 3 Miesiące</h3>
+                                <div class="meta">
+                                    <span class="tag roi">5-10k PLN/mies savings</span>
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">9:00-11:00</span>
+                                    <span class="priority-badge high">WYSOKIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Koszty 60k przy revenue 50k (weak month) = MINUS. Research benchmarks: staffing 30-35%, rent ≤25%, marketing 3-5%. Musisz wiedzieć: gdzie przepłacasz? Break-even powinien być 40-45k, nie 60k.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Zrobić Audit</h4>
+                            <ul>
+                                <li>Zbierz: wszystkie koszty wrzesień-listopad 2025 (staffing, rent, utilities, marketing, maintenance, other)</li>
+                                <li>Calculate: każda kategoria jako % total costs (target: staffing 30-35%, rent ≤25%)</li>
+                                <li>Benchmark: porównaj z research (Operational Efficiency report)</li>
+                                <li>Identify: gdzie outliers? (np. staffing 45% = overstaffing problem)</li>
+                                <li>Plan: 3 biggest cost cuts możliwe bez impact na quality</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-medium">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>19. Campus Ambassadors "Warlords" - Recruitment Plan</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Viral reach</span>
+                                    <span class="tag effort">Effort: 1.5h</span>
+                                    <span class="tag time">11:30-13:00</span>
+                                    <span class="priority-badge medium">ŚREDNIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Student research: "Campus Warlords - tribalism. Ambasadorzy organizują turnieje między akademikami". Red Bull model = ambasadorzy to nie ulotkarze, to community leaders. Cost: 200-300 zł/mies/ambassador, reach: organic + trusted.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Zaprojektować Program</h4>
+                            <ul>
+                                <li>Profile: student gaming clubs, koła e-sport (UAM/Politechnika), social influencers</li>
+                                <li>Offer: Unlimited pass + 20% commission z bookings przez ich kod + tytuł "Warlord"</li>
+                                <li>Responsibility: organize minimum 1 event/month (inter-dorm tournament, faculty battle)</li>
+                                <li>Recruitment: reach out do 3-5 candidates (z survey responses + local influencers)</li>
+                                <li>Launch: luty 2026 (after Wednesday Showdown pilot success)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-high">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>20. Corporate "Leadership Workshop" Package</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Premium B2B</span>
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">14:00-16:00</span>
+                                    <span class="priority-badge high">WYSOKIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Corporate research: "Luka - nikt nie oferuje gra + warsztat strategiczny". Revenue Streams research: "Leadership Workshops - sprzedajesz wiedzę nie czas, 3-5x wyższa cena". Differentiation + premium pricing + edukacyjny budżet firm (nie entertainment).</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Zaprojektować</h4>
+                            <ul>
+                                <li>Package: 3h total (60 min gra z rotującymi rolami liderów + 90 min debrief warsztatowy + 30 min Q&A)</li>
+                                <li>Pricing: 150-200 zł/os (min 10 osób) = 1500-2000 PLN vs standard corporate 80-100 zł/os</li>
+                                <li>Debrief: Ty lub partner-trener (psycholog biznesu) - analiza decyzji, komunikacji, leadership patterns</li>
+                                <li>Deliverable: PDF report z insights dla HR/managera (measurable outcomes = easier budget approval)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DZIEŃ 7 -->
+            <div class="day-section">
+                <div class="day-header">
+                    <h2>📅 DZIEŃ 7 - NIEDZIELA</h2>
+                    <div class="focus">Focus: Review + Measurement + Week 2 Planning</div>
+                </div>
+                <div class="tasks">
+
+                    <div class="task-card priority-critical">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>21. Week 1 Review - Data Analysis</h3>
+                                <div class="meta">
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">10:00-12:00</span>
+                                    <span class="priority-badge critical">KRYTYCZNE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>20/80 principle = measure everything. Week 1 to TESTING phase. Które kanały pokazują >10% conversion = double down. Które <5% = kill or iterate. Data-driven decisions, nie gut feeling.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Metryki do Review</h4>
+                            <ul>
+                                <li>SZKOŁY: Ile z 10 calls → interested → booking? (target >10% = 1 booking minimum)</li>
+                                <li>STUDENCI: Survey responses? Interest level? (target: 30+ responses, 50%+ "yes I'd come")</li>
+                                <li>FIRMY: LinkedIn response rate? (target: 10-15% = 2-3 responses z 20 outreach)</li>
+                                <li>EMAIL: Ile emails wysłanych? Open rate? Click rate? (target: 40%+ open)</li>
+                                <li>PRICING: Czy ktoś wybrał nowe tiers? % Standard vs Basic vs Premium?</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-high">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>22. Decision Point - Priorytetyzacja Week 2-4</h3>
+                                <div class="meta">
+                                    <span class="tag effort">Effort: 1.5h</span>
+                                    <span class="tag time">13:00-14:30</span>
+                                    <span class="priority-badge high">WYSOKIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Based na week 1 data = decide co SCALE (>10% conversion) vs co KILL (<5% conversion) vs co ITERATE (5-10%). Nie wszystko będzie działać - to OK. Focus na winners, nie na losers.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Framework Decyzyjny</h4>
+                            <ul>
+                                <li>SCALE (week 2-4): Channels z >10% conversion (np. jeśli cold calls szkół = 20% interested → scale do 20 calls/week)</li>
+                                <li>ITERATE: Channels 5-10% conversion (adjust messaging, test pricing, try different approach)</li>
+                                <li>KILL: Channels <5% conversion (stop, reallocate time/budget)</li>
+                                <li>BUILD: Infrastructure dla winners (landing pages, booking flow, automation)</li>
+                                <li>PLAN: Jeśli studenci pokazują demand → launch Wednesday Showdown week 3</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-medium">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>23. Prep Week 2 - Materials & Scripts</h3>
+                                <div class="meta">
+                                    <span class="tag effort">Effort: 2h</span>
+                                    <span class="tag time">15:00-17:00</span>
+                                    <span class="priority-badge medium">ŚREDNIE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Week 1 = testing, Week 2 = scaling winners. Przygotowanie materials ahead = smooth execution. Research: preparedness zwiększa conversion rate 20-30%.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Co Przygotować</h4>
+                            <ul>
+                                <li>SZKOŁY: PDF "Niezbędnik Nauczyciela" (zgoda rodziców, wartości edukacyjne, safety protocol)</li>
+                                <li>STUDENCI: Facebook Event page dla Wednesday Showdown (graphics, description, registration)</li>
+                                <li>FIRMY: Case study template (based na LinkedIn responses - jaki messaging rezonuje)</li>
+                                <li>GENERAL: Tracking spreadsheet dla wszystkich kanałów (source, leads, conversions, cost, ROI)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BONUS TASKS -->
+            <div class="day-section">
+                <div class="day-header">
+                    <h2>🎁 BONUS TASKS - Jeśli Zostanie Czas</h2>
+                    <div class="focus">Optional but High-Impact</div>
+                </div>
+                <div class="tasks">
+
+                    <div class="task-card priority-medium">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>24. TikTok Competition - "20 Min Dłużej Challenge"</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Viral potential</span>
+                                    <span class="tag effort">Effort: 1h</span>
+                                    <span class="priority-badge medium">NICE-TO-HAVE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Organic TikTok user-generated content. Research: 63% młodych odkrywa venues przez TikTok. Competition mechanics = incentive do content creation. Cost: 3x 20 min gry gratis = 180 zł, reach: potential 50k+ views.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Uruchomić</h4>
+                            <ul>
+                                <li>Challenge: "Zagraj u nas, nagrij TikTok/Reel (min 15 sec), hashtag #LaserTagPoznan → top 3 videos = +20 min gratis następnym razem"</li>
+                                <li>Rules: must tag @lasertagpoznan, must show gameplay/reactions</li>
+                                <li>Duration: 2 tygodnie (dzień 8-21)</li>
+                                <li>Promotion: announce na FB/IG, tell customers przy checkout</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-medium">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>25. Partnership Koła Naukowe - Gaming/E-sport</h3>
+                                <div class="meta">
+                                    <span class="tag roi">Student pipeline</span>
+                                    <span class="tag effort">Effort: 1h</span>
+                                    <span class="priority-badge medium">NICE-TO-HAVE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Koła = organized groups = easier acquisition. Gaming/e-sport clubs = perfect fit (offline FPS). Partnership = group discounts + recurring events + word-of-mouth w community.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Podejść</h4>
+                            <ul>
+                                <li>Research: znajdź koła gaming UAM/Politechnika (FB groups, strony uczelni)</li>
+                                <li>Reach out: "Hej, chcemy sponsorować koło. Offer: group discount 40% + darmowy tournament raz/semestr. Interested?"</li>
+                                <li>Value prop: offline team building dla e-sport team, content dla social, fun różny od screen time</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="task-card priority-medium">
+                        <div class="task-header">
+                            <div class="checkbox"></div>
+                            <div class="task-title">
+                                <h3>26. Direct Mail Szkół - 20 Dyrektorów (Prep)</h3>
+                                <div class="meta">
+                                    <span class="tag roi">School pipeline</span>
+                                    <span class="tag effort">Effort: 1.5h</span>
+                                    <span class="priority-badge medium">NICE-TO-HAVE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why">
+                            <h4>💡 Dlaczego</h4>
+                            <p>Research: decision timeline szkół = 1-3 miesiące. Direct mail (fizyczny) wyróżnia się (wszyscy emailują). Cost: 300 PLN (druk + poczta), potential: 2-3 bookings = 3-4.5k PLN.</p>
+                        </div>
+                        <div class="how">
+                            <h4>🔨 Jak Przygotować</h4>
+                            <ul>
+                                <li>Design: 1-page flyer "WF Laser Tag - Aktywność + Współpraca dla Twojej Klasy"</li>
+                                <li>Include: QR code do PDF z pełną ofertą + safety protocols</li>
+                                <li>List: 20 szkół podstawowych (z bazy dzień 1)</li>
+                                <li>Send: tydzień 2 (po optymalizacji messaging based na cold call feedback)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="kpi-box">
+            <div class="number">+70k PLN</div>
+            <div class="desc">Expected Revenue Boost - Miesiąc 1</div>
+        </div>
+
+        <div class="footer">
+            <h3>🚀 Bottom Line</h3>
+            <p><strong>Week 1 = TESTING PHASE.</strong> Zero perfectionism. Launch MVPs, zbieraj dane, iteruj. Które kanały pokazują >10% conversion = SCALE w week 2-4. Które <5% = KILL. Focus na top 3: EMAIL (18k), PRICING (15k), DEAD HOURS (25k). Total potential: +70k PLN/mies przy <20k investment.</p>
+            <p style="margin-top: 15px; font-size: 1.2em; color: #667eea;"><strong>START JUTRO. MEASURE EVERYTHING. ITERATE FAST.</strong></p>
+        </div>
+
+    </div>
+</body>
+</html>
