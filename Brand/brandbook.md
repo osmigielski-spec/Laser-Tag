@@ -42,8 +42,8 @@ Marka, która pomaga klientowi pokonać wyzwanie i zwyciężyć. Komunikuje "das
 
 | Segment | Do decydenta | O uczestnikach |
 |---------|--------------|----------------|
-| **Urodziny** | Władca: "My ogarniamy, Ty masz spokój" | Bohater: "Dziecko będzie bohaterem dnia" |
-| **Firmy** | Władca: "Zero cringu, zero stresu, dowozimy" | Bohater: "Zespół poczuje rywalizację i energię" |
+| **Urodziny** | Władca: "Zajmujemy się wszystkim, masz spokój" | Bohater: "Dziecko będzie bohaterem dnia" |
+| **Firmy** | Władca: "Bez stresu, wszystko zapewniamy" | Bohater: "Zespół poczuje rywalizację i energię" |
 | **Szkoły** | Władca: "Dokumenty gotowe, wycieczka bezpieczna" | Bohater: "Uczniowie przeżyją coś wyjątkowego" |
 | **Studenci** | Bohater: "Prawdziwa rywalizacja z ekipą, historia do opowiadania" | (sami są uczestnikami) |
 
@@ -93,7 +93,7 @@ Ton głosu to jak marka mówi - jakich słów używa, jaki ma styl. Musi być sp
 
 - **Konkretny i bezpośredni** - bez lania wody, od razu do rzeczy
 - **Pewny, nie arogancki** - "wiemy co robimy" zamiast "jesteśmy najlepsi"
-- **Ludzki, nie korporacyjny** - piszemy jak mówimy
+- **Profesjonalny, ale ludzki** - nie korpo, nie slang - naturalny język
 - **Energiczny, nie krzykliwy** - dynamika tak, caps lock i wykrzykniki nie
 
 ### Przykłady:
@@ -132,7 +132,7 @@ Obietnica to konkretne zobowiązanie, które dajemy klientowi. Musi być prawdzi
 |---------|-----------|
 | **Urodziny** | "10 lat doświadczenia. Spokój dla Ciebie, niezapomniane urodziny dla dziecka." |
 | **Firmy** | "Sprawdzona integracja od 10 lat. Spokój dla Ciebie, emocje dla zespołu." |
-| **Szkoły** | "Setki wycieczek szkolnych za nami. Wiesz, że będzie bezpiecznie - a klasa zapamięta to na długo." |
+| **Szkoły** | "Setki wycieczek szkolnych za nami. Bezpiecznie i z emocjami - klasa zapamięta to na długo." |
 | **Studenci** | "Prawdziwa rywalizacja z ekipą w forcie - wrócicie z historiami do opowiadania." |
 
 **Wspólny wzorzec:** Dla decydentów (rodzic, HR, nauczyciel) obietnica zawiera **"Spokój dla Ciebie"** (Władca), a dla uczestników **"przeżycie/emocje/historia"** (Bohater).
