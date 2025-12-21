@@ -55,10 +55,10 @@ Gdyby Laser Tag Poznań był osobą - jaka by była? Te cechy pomagają zachowa�
 
 ### ✓ MARKA JEST:
 
-- **Profesjonalna** - ogarniamy, mamy standardy
+- **Profesjonalna** - mamy wszystko pod kontrolą
 - **Pewna siebie** - wiemy co robimy, 10+ lat doświadczenia
 - **Pasjonacka** - gracze dla graczy, to nasza zajawka
-- **Konkretna** - mówimy wprost, bez ściemy
+- **Konkretna** - mówimy wprost, bez komplikacji
 - **Dynamiczna** - energia, tempo, akcja
 - **Przystępna** - profesjonalna ale nie sztywna
 
@@ -67,7 +67,7 @@ Gdyby Laser Tag Poznań był osobą - jaka by była? Te cechy pomagają zachowa�
 - **Korporacyjna/sztywna** - żadnej marketingowej gadki
 - **Chaotyczna** - nie improwizujemy, mamy plan
 - **Dziecinna/infantylna** - to poważna gra
-- **Taśmowa** - nie kręcimy eventów "byle zaliczyć"
+- **Taśmowa** - nie robimy eventów na odczepnego
 - **Arogancka** - pewni siebie, ale nie zarozumiali
 
 ---
@@ -100,10 +100,10 @@ Ton głosu to jak marka mówi - jakich słów używa, jaki ma styl. Musi być sp
 
 | ✓ TAK MÓWIMY | ✕ TAK NIE MÓWIMY |
 |--------------|------------------|
-| "Ogarniamy wszystko - Ty przywozisz dzieci" | "Zapewniamy kompleksową obsługę eventową" |
-| "10 lat robimy laser tag. Wiemy jak prowadzić grę." | "Jesteśmy liderem rynku rozrywki!" |
+| "Zajmujemy się wszystkim - wystarczy przyjechać z dziećmi" | "Zapewniamy kompleksową obsługę eventową" |
+| "10 lat doświadczenia. Wiemy jak prowadzić dobrą grę." | "Jesteśmy liderem rynku rozrywki!" |
 | "Gra trwa 60 minut, zaczynamy punktualnie" | "Oferujemy elastyczne pakiety czasowe" |
-| "Masz pytania? Zadzwoń, dogadamy się" | "Skontaktuj się z naszym działem obsługi" |
+| "Masz pytania? Zadzwoń, wszystko ustalimy" | "Skontaktuj się z naszym działem obsługi" |
 
 ---
 
@@ -117,8 +117,8 @@ Ton głosu to jak marka mówi - jakich słów używa, jaki ma styl. Musi być sp
 
 | Segment | Hasło główne | Hasło wspierające |
 |---------|--------------|-------------------|
-| **Urodziny** | URODZINY, O KTÓRYCH BĘDZIE MÓWIĆ CAŁY ROK | Robimy to od 10 lat. Ty masz spokój, dziecko ma urodziny życia. |
-| **Firmy** | INTEGRACJA, KTÓRĄ ZESPÓŁ ZAPAMIĘTA | Dowozimy sprawdzoną integrację od 10 lat. Ty masz spokój, zespół ma emocje. |
+| **Urodziny** | URODZINY, O KTÓRYCH BĘDZIE MÓWIĆ CAŁY ROK | 10 lat doświadczenia. Spokój dla Ciebie, niezapomniane urodziny dla dziecka. |
+| **Firmy** | INTEGRACJA, KTÓRĄ ZESPÓŁ ZAPAMIĘTA | Sprawdzona integracja od 10 lat. Spokój dla Ciebie, emocje dla zespołu. |
 | **Szkoły** | PRZYGODA W HISTORYCZNYM FORCIE | Bezpieczna wycieczka, którą klasa zapamięta. |
 | **Studenci** | ZBIERZ EKIPĘ. WEJDŹ DO GRY. | Prawdziwa rywalizacja z ekipą w forcie - wrócicie z historiami do opowiadania. |
 
@@ -130,12 +130,12 @@ Obietnica to konkretne zobowiązanie, które dajemy klientowi. Musi być prawdzi
 
 | Segment | Obietnica |
 |---------|-----------|
-| **Urodziny** | "Robimy to od 10 lat. Ty masz spokój, dziecko ma urodziny życia." |
-| **Firmy** | "Dowozimy sprawdzoną integrację od 10 lat. Ty masz spokój, zespół ma emocje." |
+| **Urodziny** | "10 lat doświadczenia. Spokój dla Ciebie, niezapomniane urodziny dla dziecka." |
+| **Firmy** | "Sprawdzona integracja od 10 lat. Spokój dla Ciebie, emocje dla zespołu." |
 | **Szkoły** | "Setki wycieczek szkolnych za nami. Wiesz, że będzie bezpiecznie - a klasa zapamięta to na długo." |
 | **Studenci** | "Prawdziwa rywalizacja z ekipą w forcie - wrócicie z historiami do opowiadania." |
 
-**Wspólny wzorzec:** Dla decydentów (rodzic, HR, nauczyciel) obietnica zawiera **"Ty masz spokój"** (Władca), a dla uczestników **"przeżycie/emocje/historia"** (Bohater).
+**Wspólny wzorzec:** Dla decydentów (rodzic, HR, nauczyciel) obietnica zawiera **"Spokój dla Ciebie"** (Władca), a dla uczestników **"przeżycie/emocje/historia"** (Bohater).
 
 ---
 
