@@ -225,9 +225,10 @@ Tekst: Biały, Bebas Neue
 │  URODZINY, O KTÓRYCH            │  ← Nagłówek biały
 │  BĘDZIE MÓWIĆ CAŁY ROK          │
 │                                 │
-│  Robimy to od 10 lat.           │  ← Tekst szary/przezroczysty
-│  Ty masz spokój, dziecko        │
-│  ma urodziny życia.             │
+│  10 lat doświadczenia.          │  ← Tekst szary/przezroczysty
+│  Spokój dla Ciebie,             │
+│  niezapomniane urodziny         │
+│  dla dziecka.                   │
 │                                 │
 │  [  SPRAWDŹ PAKIETY  ]          │  ← CTA pomarańczowy
 │                                 │
