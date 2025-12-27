@@ -127,7 +127,7 @@ Geometryczne, ostre kształty. Taktyczna siatka, linie kierunkowe, narożniki "b
 | Typ | Opis | Obróbka |
 |-----|------|---------|
 | **Akcja** | Gracze w trakcie gry, ruch, lasery | Wysoki kontrast, wydobyte światła laserów |
-| **Sprzęt** | Karabiny, kamizelki, wyposażenie | Czyste tło, produktowe, profesjonalne |
+| **Sprzęt** | Karabiny, opaski na głowę, wyposażenie | Czyste tło, produktowe, profesjonalne |
 | **Fort** | Klimat miejsca, korytarze, teren | Ciemne, atmosferyczne, tajemnicze |
 | **Grupy** | Drużyny, uczestnicy przed/po grze | Naturalne, ale z zachowaniem palety |
 

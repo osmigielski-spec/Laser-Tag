@@ -219,10 +219,10 @@ Poniżej masz gotowe psychograficzne opisy głównych grup. Możesz je traktowa�
 
 ### 1.6. Co ją przyciąga u Ciebie
 
-- prosty komunikat: „Urodziny od A do Z – Ty przywozisz dzieci, my robimy resztę”,  
-- jasny cennik: „pakiet X – tyle dzieci, tyle czasu, wszystko w cenie”,  
-- zdjęcia pokazujące: **uśmiechnięte dzieci + spokojni dorośli w strefie rodzica**,  
-- informacja o bezpieczeństwie (sprzęt, zasady, opieka animatorów). - nie ma animatorów i nie będzie, dzieci praktycznie nie zostają pod naszą opieką, bo rodzic musi być na miejscu, ale praocwnicy "ogarniają" dzieci organizacyjnie (notatka właściciela firmy)
+- prosty komunikat: „Zajmujemy się wszystkim – wystarczy przyjechać z dziećmi",
+- jasny cennik: „pakiet X – tyle dzieci, tyle czasu, wszystko w cenie",
+- zdjęcia pokazujące: **uśmiechnięte dzieci + spokojni dorośli w strefie rodzica**,
+- informacja o bezpieczeństwie i organizacji (sprzęt, zasady, instruktorzy prowadzący grę). Rodzic musi być na miejscu, ale instruktorzy prowadzą całą grę i dbają o organizację.
 
 ---
 

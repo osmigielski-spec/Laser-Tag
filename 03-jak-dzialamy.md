@@ -14,11 +14,11 @@ Standardowa usługa:
 1. Klient rezerwuje termin (telefon/mail po sprawdzeniu kalendarza na stronie).
 2. W dniu imprezy:
    - instruktor szkoli grupę, tłumaczy zasady, demonstruje teren
-   - dobiera sprzęt (AK12 Predator / MP9 Fenix / inne repliki)
+   - dobiera sprzęt (AK12 Predator / MP9 Fenix / inne repliki + opaskę na głowę)
    - prowadzi rozgrywkę (zwykle *team deathmatch* + ewentualne scenariusze z punktem kontrolnym).
 3. Po grze:
    - zgrywa wyniki i omawia statystyki
-   - grupa idzie do sali lub na ognisko (jeśli wykupione).
+   - grupa korzysta z sali **lub** ogniska (jeśli wykupione) - jedno z dwóch, nie oba naraz. Chyba że to impreza/integracja firmowa, wtedy czasami wynajmowane są oba naraz.
 4. Czas trwania:
    - do gry doliczany jest czas organizacyjny (np. 30 min gry = ok. 60 min rezerwacji)
    - sala – moduły 30 lub 45 minut
@@ -33,9 +33,9 @@ Dodatkowo:
 Rezerwacje są ułożone tak, żeby jeden pracownik był w stanie:
 
 - jednocześnie prowadzić gry,
-- obsłużyć salę/ognisko (w przypadku areny wewnętrznej – ze względu na bliskość).
+- obsłużyć salę **lub** ognisko (w przypadku areny wewnętrznej – ze względu na bliskość).
 
-Przy grach zewnętrznych + sali/ogniska trzeba drugiej osoby.
+Przy grach zewnętrznych + (sali **lub** ogniska) trzeba drugiej osoby.
 
 
 ## Ludzie i zespoły
